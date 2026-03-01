@@ -1,13 +1,13 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 const categories = [
-  { name: "Liposomal Injectables", complexity: 5, focus: "Oncology, Antifungal, Anaesthesia" },
-  { name: "Nanoemulsion & Emulsion Injectables", complexity: 4, focus: "Anaesthesia, Oncology, Vitamins" },
-  { name: "Injectable Suspensions", complexity: 4, focus: "Corticosteroids, Oncology, Anaesthesia" },
-  { name: "Peptide & Pre-Filled Syringe Systems", complexity: 5, focus: "Metabolic, Hormone therapy, Critical care" },
-  { name: "Colloidal IV Solutions", complexity: 4, focus: "Iron deficiency, Renal anaemia" },
-  { name: "Critical Care Liquid Injectables", complexity: 3, focus: "Cardiac ICU, Pain, Anti-infective" },
-  { name: "Ophthalmic Suspensions & Gels", complexity: 3, focus: "Inflammatory eye, Post-operative care" },
+  { name: "Liposomal Injectables", dosage: "Liposome dispersions, nano-encapsulated systems", complexity: 5, focus: "Oncology, Antifungal, Anaesthesia" },
+  { name: "Nanoemulsion & Emulsion Injectables", dosage: "Sterile oil-in-water emulsions", complexity: 4, focus: "Anaesthesia, Oncology support, Vitamins" },
+  { name: "Injectable Suspensions", dosage: "Sterile particle suspensions", complexity: 4, focus: "Corticosteroids, Oncology, Anaesthesia" },
+  { name: "Peptide & Pre-Filled Syringe Systems", dosage: "Sterile peptide solutions, PFS", complexity: 5, focus: "Metabolic disease, Hormone therapy, Critical care" },
+  { name: "Colloidal IV Solutions", dosage: "Iron-carbohydrate complexes, nanoparticle dispersions", complexity: 4, focus: "Iron deficiency, Renal anaemia" },
+  { name: "Critical Care Liquid Injectables", dosage: "Sterile aqueous solutions", complexity: 3, focus: "Cardiac ICU, Pain, Anti-infective, Obstetrics" },
+  { name: "Ophthalmic Suspensions & Gels", dosage: "Sterile ophthalmic / otic formulations", complexity: 3, focus: "Inflammatory eye conditions, Post-operative care" },
 ];
 
 function ComplexityDots({ level }: { level: number }) {
@@ -26,22 +26,29 @@ export function Pipeline() {
       <div className="section-container">
         <AnimatedSection>
           <span className="section-label">Section 08 — Product Pipeline</span>
-          <h2 className="section-headline">A Focused Pipeline — Selected on Defined Criteria</h2>
+          <h2 className="section-headline">A Focused Pipeline — Selected on Three Defined Criteria</h2>
           <p className="section-body mb-4">
-            Every product was selected against three criteria: high global demand,
-            high formulation complexity, and limited domestic development capability.
+            Every product in the LRC pipeline was selected against three criteria:
+            (1) high and sustained global demand in its therapeutic category,
+            (2) high formulation complexity requiring specialised infrastructure and
+            scientific expertise, and (3) limited or absent domestic development
+            capability in India.
+          </p>
+          <p className="section-body mb-2">
+            No product entered the pipeline on commercial interest alone.
           </p>
           <p className="text-xs font-mono text-primary/60 uppercase tracking-wider mb-12">
-            Full pipeline detail available under signed NDA
+            Full pipeline detail and API-level data available under signed NDA
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
           <div className="space-y-3">
-            {categories.map((c, i) => (
+            {categories.map((c) => (
               <div key={c.name} className="stat-card flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
                 <div className="flex-1">
                   <h4 className="font-serif font-semibold">{c.name}</h4>
+                  <p className="text-xs text-muted-foreground/70 mt-0.5">{c.dosage}</p>
                   <p className="text-xs text-muted-foreground mt-1">{c.focus}</p>
                 </div>
                 <div className="flex items-center gap-3">

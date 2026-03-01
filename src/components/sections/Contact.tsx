@@ -10,8 +10,9 @@ export function Contact() {
           <span className="section-label">Get in Touch</span>
           <h2 className="section-headline mx-auto">Interested in Learning More?</h2>
           <p className="section-body mx-auto mb-10">
-            For detailed pipeline data, financial projections, and partnership discussions,
-            please reach out directly. Full documentation is available under signed NDA.
+            For detailed pipeline data, financial projections, team bios, and partnership
+            discussions, please reach out directly. Full documentation is available under
+            signed NDA.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="hero" size="lg" asChild>
@@ -29,11 +30,15 @@ export function Contact() {
         </AnimatedSection>
 
         <div className="mt-20 pt-8 border-t border-border">
+          <p className="font-mono text-xs text-primary/70 mb-2 italic">
+            Where Innovation Meets Precision. Precision Creates Impact.
+          </p>
           <p className="font-mono text-[10px] text-muted-foreground tracking-wider uppercase">
             © 2026 Lyosha Research Centre. Confidential — For Qualified Investors Only.
           </p>
           <p className="font-mono text-[10px] text-muted-foreground/60 mt-2">
-            All financial projections are indicative estimates. Detailed pipeline available under signed NDA.
+            All financial projections are indicative estimates subject to market and operational conditions.
+            Detailed pipeline, financial models, and team bios available under signed NDA.
           </p>
         </div>
       </div>

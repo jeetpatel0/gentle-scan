@@ -2,10 +2,10 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { Shield, Award, Heart, Globe } from "lucide-react";
 
 const pillars = [
-  { icon: Shield, title: "Domestic Supply Security", desc: "Developing formulations in categories where India currently relies on imported supply — contributing to national drug security." },
-  { icon: Award, title: "PLI Scheme Eligibility", desc: "LRC's formulation categories are directly targeted by the Production Linked Incentive scheme. Structured from Day 1 to qualify." },
-  { icon: Heart, title: "National Health Mission", desc: "Supporting affordable access to complex medicines by enabling domestic development and reducing reliance on higher-cost imports." },
-  { icon: Globe, title: "Export Leadership", desc: "Contributing to India's ₹130 Bn pharma export target by 2030 through complex generics development and regulated market filings." },
+  { icon: Shield, title: "Domestic Supply Security", desc: "Developing formulations in specific categories where India currently relies on imported supply — contributing to national drug security for oncology treatments, ophthalmic medicines, and critical-care injectables at the institutional and hospital level." },
+  { icon: Award, title: "PLI Scheme Eligibility", desc: "LRC's formulation categories fall directly within the pharmaceutical Production Linked Incentive scheme's targeted product list. Our development pipeline and commercialisation structure is designed to qualify for and access PLI incentives from the outset." },
+  { icon: Heart, title: "National Health Mission", desc: "Supporting more affordable domestic access to complex medicines — including oncology and ophthalmic formulations — by building Indian development capability and reducing institutional dependence on costlier imported alternatives." },
+  { icon: Globe, title: "Export Leadership", desc: "Contributing to India's ₹130 Bn pharma export target by 2030 through complex generics development, validated technology transfer, dossier licensing, and regulated market filings across LATAM, MENA, CIS, and ASEAN markets." },
 ];
 
 const bodies = [
@@ -23,10 +23,13 @@ export function Government() {
       <div className="section-container">
         <AnimatedSection>
           <span className="section-label">Section 06 — Government Alignment</span>
-          <h2 className="section-headline">Directly Aligned With India's Pharmaceutical Policy</h2>
+          <h2 className="section-headline">Aligned With India's National Pharmaceutical Priorities</h2>
           <p className="section-body mb-12">
-            LRC's work is directly aligned with PLI scheme eligibility, Atmanirbhar Bharat's import
-            substitution mandate, and India's ₹130 Bn pharma export target for 2030.
+            LRC's work is directly aligned with India's national pharmaceutical policy —
+            across PLI scheme objectives, the Atmanirbhar Bharat import substitution
+            mandate, and the ₹130 Bn pharma export target for 2030. This alignment is
+            not incidental — our platform was structured to contribute meaningfully to
+            each of these goals from Day 1.
           </p>
         </AnimatedSection>
 
@@ -57,6 +60,10 @@ export function Government() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            Non-dilutive grant funding through BIRAC BIG and DBT Ignite is actively
+            being pursued to maximise runway and reduce early equity dilution.
+          </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.4}>

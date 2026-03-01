@@ -25,10 +25,13 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <span className="section-label">Lyosha Research Centre</span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-6 max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-4 max-w-4xl">
             Building India's Next Layer of{" "}
             <span className="gradient-text">Formulation Capability</span>
           </h1>
+          <p className="font-mono text-xs md:text-sm tracking-wide text-primary/80 mb-6 uppercase">
+            Where Innovation Meets Precision. Precision Creates Impact.
+          </p>
           <p className="section-body mb-10 max-w-2xl">
             An integrated complex formulation R&D platform, purpose-built for liposomal injectables,
             nano-delivery systems, sterile ophthalmics, and peptide therapeutics.
