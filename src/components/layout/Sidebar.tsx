@@ -8,16 +8,13 @@ import logoFull from "@/assets/logo-full.png";
 const sections = [
   { id: "hero", label: "Home" },
   { id: "about", label: "Who We Are" },
-  { id: "problem", label: "The Problem" },
-  { id: "capability", label: "Capability" },
-  { id: "services", label: "Services" },
-  { id: "market", label: "Market" },
+  { id: "platforms", label: "What We Work On" },
+  { id: "howwework", label: "How We Work" },
+  { id: "whylrc", label: "Why LRC" },
+  { id: "science", label: "Scientific Direction" },
   { id: "government", label: "Policy" },
-  { id: "competitive", label: "Competitive Moat" },
-  { id: "pipeline", label: "Pipeline" },
-  { id: "roadmap", label: "Roadmap" },
-  { id: "capital", label: "Use of Capital" },
   { id: "team", label: "Team" },
+  { id: "contact", label: "Contact" },
 ];
 
 export function Sidebar() {

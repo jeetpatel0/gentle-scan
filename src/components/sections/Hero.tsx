@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logoFull from "@/assets/logo-full.png";
-
-const stats = [
-  { value: "<3%", label: "of Indian pharma has this capability" },
-  { value: "32", label: "Products in pipeline" },
-  { value: "19", label: "Revenue verticals" },
-  { value: "$40B+", label: "Addressable market" },
-];
+import logoIcon from "@/assets/logo-icon.png";
 
 export function Hero() {
   return (
@@ -19,57 +13,85 @@ export function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/3 blur-[120px] animate-pulse-slow" />
       </div>
 
+      {/* Floating molecules decoration */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 rounded-full bg-primary/20"
+            style={{
+              left: `${15 + i * 15}%`,
+              top: `${20 + (i % 3) * 25}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 4 + i,
+              repeat: Infinity,
+              delay: i * 0.5,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="section-container relative z-10 pt-20 lg:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex flex-col items-start"
         >
-          <img
+          {/* Large logo */}
+          <motion.img
             src={logoFull}
             alt="Lyosha Research Centre"
-            className="h-24 md:h-32 lg:h-40 w-auto mb-3 dark:brightness-150 dark:drop-shadow-[0_0_20px_hsl(300_60%_70%/0.5)]"
+            className="h-28 md:h-40 lg:h-52 w-auto mb-2 dark:brightness-150 dark:drop-shadow-[0_0_20px_hsl(300_60%_70%/0.5)]"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           />
-          <p className="font-mono text-xs md:text-sm tracking-[0.2em] text-primary/80 mb-10 uppercase">
+
+          {/* Tagline directly under logo */}
+          <motion.p
+            className="font-mono text-[10px] md:text-xs tracking-[0.25em] text-primary/80 mb-12 uppercase"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
             Where Innovation Meets Precision. Precision Creates Impact.
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-4 max-w-4xl">
-            Building India's Next Layer of{" "}
-            <span className="gradient-text">Formulation Capability</span>
+          </motion.p>
+
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-6 max-w-4xl">
+            Complex Injectable Formulations, Built for a{" "}
+            <span className="gradient-text">Changing Global Market</span>
           </h1>
           <p className="section-body mb-10 max-w-2xl">
-            An integrated complex formulation R&D platform, purpose-built for liposomal injectables,
-            nano-delivery systems, sterile ophthalmics, and peptide therapeutics.
+            Lyosha Research Centre (LRC) is a specialist R&D platform focused on complex
+            sterile injectables and advanced drug delivery systems. We develop high-barrier
+            formulations that few facilities can execute, so manufacturers and global
+            partners can enter demanding markets with confidence.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-16">
-            <Button variant="hero" size="lg" onClick={() => document.getElementById("capital")?.scrollIntoView({ behavior: "smooth" })}>
-              Investment Thesis
+            <Button variant="hero" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+              Contact Us for a Technical Discussion
             </Button>
-            <Button variant="hero-outline" size="lg" onClick={() => document.getElementById("pipeline")?.scrollIntoView({ behavior: "smooth" })}>
-              View Pipeline
+            <Button variant="hero-outline" size="lg" onClick={() => document.getElementById("platforms")?.scrollIntoView({ behavior: "smooth" })}>
+              What We Work On
             </Button>
           </div>
         </motion.div>
 
+        {/* Decorative icon element */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 opacity-[0.04] dark:opacity-[0.06]"
+          initial={{ opacity: 0, rotate: -10 }}
+          animate={{ opacity: 0.04, rotate: 0 }}
+          transition={{ delay: 0.6, duration: 1.2 }}
         >
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + i * 0.1 }}
-              className="stat-card"
-            >
-              <div className="text-2xl md:text-3xl font-serif font-bold gradient-text mb-1">{s.value}</div>
-              <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{s.label}</div>
-            </motion.div>
-          ))}
+          <img src={logoIcon} alt="" className="w-[400px] h-auto" aria-hidden="true" />
         </motion.div>
       </div>
     </section>
