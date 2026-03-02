@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logoFull from "@/assets/logo-full.png";
 
 const stats = [
   { value: "<3%", label: "of Indian pharma has this capability" },
@@ -24,7 +25,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="section-label">Lyosha Research Centre</span>
+          <img
+            src={logoFull}
+            alt="Lyosha Research Centre"
+            className="h-16 md:h-20 w-auto mb-6 dark:brightness-150 dark:drop-shadow-[0_0_20px_hsl(300_60%_70%/0.5)]"
+          />
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-4 max-w-4xl">
             Building India's Next Layer of{" "}
             <span className="gradient-text">Formulation Capability</span>
