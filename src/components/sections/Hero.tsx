@@ -28,15 +28,15 @@ export function Hero() {
           <img
             src={logoFull}
             alt="Lyosha Research Centre"
-            className="h-16 md:h-20 w-auto mb-6 dark:brightness-150 dark:drop-shadow-[0_0_20px_hsl(300_60%_70%/0.5)]"
+            className="h-24 md:h-32 lg:h-40 w-auto mb-3 dark:brightness-150 dark:drop-shadow-[0_0_20px_hsl(300_60%_70%/0.5)]"
           />
+          <p className="font-mono text-xs md:text-sm tracking-[0.2em] text-primary/80 mb-10 uppercase">
+            Where Innovation Meets Precision. Precision Creates Impact.
+          </p>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-4 max-w-4xl">
             Building India's Next Layer of{" "}
             <span className="gradient-text">Formulation Capability</span>
           </h1>
-          <p className="font-mono text-xs md:text-sm tracking-wide text-primary/80 mb-6 uppercase">
-            Where Innovation Meets Precision. Precision Creates Impact.
-          </p>
           <p className="section-body mb-10 max-w-2xl">
             An integrated complex formulation R&D platform, purpose-built for liposomal injectables,
             nano-delivery systems, sterile ophthalmics, and peptide therapeutics.
