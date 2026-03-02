@@ -10,6 +10,7 @@ import { Competitive } from "@/components/sections/Competitive";
 import { Pipeline } from "@/components/sections/Pipeline";
 import { Roadmap } from "@/components/sections/Roadmap";
 import { Capital } from "@/components/sections/Capital";
+import { Team } from "@/components/sections/Team";
 import { Contact } from "@/components/sections/Contact";
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
         <Pipeline />
         <Roadmap />
         <Capital />
+        <Team />
         <Contact />
       </main>
     </>

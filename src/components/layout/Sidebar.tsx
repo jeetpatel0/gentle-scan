@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import logoIcon from "@/assets/logo-icon.png";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -15,6 +16,7 @@ const sections = [
   { id: "pipeline", label: "Pipeline" },
   { id: "roadmap", label: "Roadmap" },
   { id: "capital", label: "Use of Capital" },
+  { id: "team", label: "Team" },
 ];
 
 export function Sidebar() {
@@ -64,12 +66,19 @@ export function Sidebar() {
     <>
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-60 flex-col border-r border-border bg-sidebar z-40">
-        <div className="p-6 border-b border-border">
-          <div className="font-serif text-xl font-semibold text-foreground">
-            LRC
-          </div>
-          <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-muted-foreground mt-1">
-            Lyosha Research Centre
+        <div className="p-6 border-b border-border flex items-center gap-3">
+          <img
+            src={logoIcon}
+            alt="LRC Logo"
+            className="h-10 w-auto dark:brightness-150 dark:drop-shadow-[0_0_12px_hsl(300_60%_70%/0.6)]"
+          />
+          <div>
+            <div className="font-serif text-xl font-semibold text-foreground">
+              LRC
+            </div>
+            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-muted-foreground">
+              Lyosha Research Centre
+            </div>
           </div>
         </div>
         <div className="flex-1 overflow-y-auto p-4">
